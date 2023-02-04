@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper 分组 16:10</title>
+
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="../common/css/reset.css">
+
+  <style>
+    ul {
+      display: flex;
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    li {
+      background-color: #bbb;
+      padding: 10px 20px;
+      margin-right: 8px;
+    }
+
+    li.active {
+      background-color: orange;
+      color: white;
+    }
+
+    .swiper {
+      width: 700px;
+      height: 200px;
+      border: 3px solid green;
+    }
+
+    .swiper-slide>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="active">早餐</li>
+    <li>午餐</li>
+    <li>晚餐</li>
+    <li>夜宵</li>
+  </ul>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- <div class="swiper-slide">
+        <img src="../assets/img/food/index (10).jpg" alt="">
+      </div> -->
+    </div>
+  </div>
+
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    for (let i = 10; i <= 21; i++) {
+      $('.swiper-wrapper').append(`<div class="swiper-slide">
+        <img src="../assets/img/food/index (${i}).jpg" alt="">
+      </div>`)
+    }
+
+
+    var mySwiper = new Swiper('.swiper', {
+      slidesPerView: 3, //同时显示的数量
+      slidesPerGroup: 3, // 3个一组
+      spaceBetween: 10, //间距, 单位px
+      // 监听事件
+      on: {
+        // 内容切换时触发
+        slideChange: function () {
+          console.log(this.activeIndex);
+          // 3个1组, 需要序号除以3
+          const i = this.activeIndex / 3
+          $('ul>li').eq(i).click()
+        },
+      },
+    })
+
+    $('ul>li').click(function () {
+      $(this).addClass('active').siblings().removeClass('active')
+
+      const i = $(this).index() //激活项的序号
+      // 滚动到指定序号的元素
+      mySwiper.slideTo(3 * i) // 3个1组, 序号x3 是组开头的元素序号
+    })
+  </script>
+</body>
+
+</html>

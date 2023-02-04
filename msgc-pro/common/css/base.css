@@ -1,0 +1,61 @@
+/* base.css : 基础样式 - 当前项目具有的个性化通用样式 */
+
+html {
+  /* 灰色滤镜 */
+  /* filter: grayscale(1); */
+}
+
+/* 设置body的最小宽度 */
+body {
+  min-width: 1000px;
+}
+
+.breadcrumb {
+  padding: 10px 0;
+}
+
+.breadcrumb>a {
+  color: #333;
+}
+
+.loadmore {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  color: #888;
+}
+
+/* 激活时 */
+button:active {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 显式一行文本 */
+.line-1 {
+  /* 文本不换行 */
+  white-space: nowrap;
+  overflow: hidden;
+  /* 文本超出的, 用... 表示 */
+  text-overflow: ellipsis;
+}
+
+/* 个性化滚动栏 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* 轨道 */
+::-webkit-scrollbar-track {
+  background-color: #ddd9cf;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: #b3aa94;
+  border-radius: 10px;
+}

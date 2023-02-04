@@ -1,0 +1,21 @@
+#footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  color: white;
+}
+#footer > ul {
+  display: flex;
+}
+#footer > ul > li {
+  margin: 0 6px;
+}
+#footer > ul > li > a {
+  color: white;
+}
+#footer > p {
+  font-size: 12px;
+  margin-top: 5px;
+}/*# sourceMappingURL=footer.css.map */

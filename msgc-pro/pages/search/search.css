@@ -1,0 +1,74 @@
+#body {
+  background-color: #f7f7f7;
+}
+#body > div {
+  width: 1000px;
+  margin: 0 auto;
+}
+#body > div > .list > li {
+  margin-bottom: 10px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.08);
+  height: 150px;
+}
+#body > div > .list > li > img {
+  height: 100%;
+}
+#body > div > .list > li > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: space-around;
+}
+#body > div > .list > li > div > b {
+  color: red;
+}
+#body > div > .list > li > div > span {
+  color: gray;
+}
+#body > div > .pager {
+  display: flex;
+  padding: 20px 0;
+}
+#body > div > .pager > button {
+  height: 30px;
+  width: 70px;
+  border-radius: 4px;
+  border: 1px solid #777;
+}
+#body > div > .pager > button:disabled {
+  border-color: #aaa;
+}
+#body > div > .pager > ul {
+  display: flex;
+}
+#body > div > .pager > ul > li {
+  line-height: 28px;
+  text-align: center;
+  width: 30px;
+  border-radius: 4px;
+  border: 1px solid #777;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#body > div > .pager > ul > li.active {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+#body > div > .pager > ul > li:last-child {
+  margin-right: 5px;
+}
+#body > div > .sort {
+  display: flex;
+  margin-bottom: 10px;
+}
+#body > div > .sort > li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+#body > div > .sort > li.active {
+  color: orange;
+}/*# sourceMappingURL=search.css.map */

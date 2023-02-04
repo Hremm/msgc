@@ -1,0 +1,61 @@
+#header {
+  background-color: #f75148;
+
+  >div {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    >img {
+      height: 60px;
+    }
+
+    >.search {
+      background-color: white;
+      display: flex;
+      height: 40px;
+      border-radius: 100px;
+      padding: 3px;
+      margin: 0 20px;
+
+      >input {
+        font-size: 18px;
+        padding-left: 10px;
+      }
+
+      >button {
+        color: white;
+        background-color: #f75148;
+        border-radius: 100px;
+        width: 50px;
+      }
+    }
+
+    >ul {
+      display: flex;
+
+      >li {
+        >a {
+          line-height: 80px;
+          display: inline-block;
+          padding: 0 12px;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #f8625b;
+          }
+        }
+      }
+    }
+
+    >a {
+      color: white;
+      margin-left: auto;
+    }
+  }
+
+}

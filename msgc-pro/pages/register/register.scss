@@ -1,0 +1,82 @@
+#footer {
+  display: none !important;
+}
+
+body {
+  background-color: #fae8c8;
+
+  >#body {
+    >div {
+      width: 450px;
+      margin: 0 auto;
+      background-color: white;
+      margin-top: 100px;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+
+      >h2 {
+        margin-bottom: 20px;
+      }
+
+      // 不带有 .agree
+      >div:not(.agree) {
+        height: 75px;
+
+        >input {
+          border: 2px solid #888;
+          padding: 8px;
+          border-radius: 5px;
+          // margin-top: 20px;
+          width: 300px;
+          font-size: 20px;
+
+          &.err {
+            border-color: red;
+          }
+
+          &:focus {
+            border-color: blue;
+          }
+        }
+
+        >p {
+          display: none;
+
+          &.ok {
+            color: green;
+          }
+
+          &.err {
+            color: red;
+          }
+        }
+      }
+
+      // 同意协议: 带有 class='agree'
+      >div.agree {
+        margin-top: 40px;
+        display: flex;
+
+        >a {
+          margin-left: 4px;
+          color: red;
+          font-size: 14px;
+        }
+      }
+
+      >button {
+        background-color: #f75148;
+        border-radius: 5px;
+        width: 200px;
+        height: 36px;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// scss: 预编译 css, 支持选择器的嵌套
+#footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  color: white;
+
+  >ul {
+    display: flex;
+
+    >li {
+      margin: 0 6px;
+
+      >a {
+        color: white;
+      }
+    }
+  }
+
+  >p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}

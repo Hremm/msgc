@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper 15:10</title>
+
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+    }
+
+    .swiper-slide>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper .my-bullet {
+      width: 14px;
+      height: 14px;
+      background-color: #999;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 3px;
+    }
+
+    .swiper .my-bullet-active {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner3.png" alt="">
+      </div>
+    </div>
+
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 前进后退 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        bulletClass: "my-bullet", //自定义小圆点的 类名
+        bulletActiveClass: 'my-bullet-active',
+        clickable: true, //可以点击
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  </script>
+</body>
+
+</html>

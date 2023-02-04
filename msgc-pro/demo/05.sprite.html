@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精灵图/雪碧图 15:35</title>
+  <style>
+    body {
+      background-color: green;
+    }
+
+    i {
+      /* 默认是行元素, 无法直接给宽高;  改成行内块才能配合精灵图使用 */
+      display: inline-block;
+      width: 120px;
+      height: 150px;
+      /* border: 1px solid red; */
+      /* 背景图的偏移量, 值是 x 和 y 轴 */
+      background-position: -48px -65px;
+      transform: scale(0.2);
+      /* 缩放后, 左上角对齐 */
+      transform-origin: 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 精灵图使用时, 需要利用 背景图来实现 -->
+  <!-- i  italic斜体   这是此标签原始含义 -->
+  <!-- <i>斜体标签</i> -->
+
+  <!-- 在实际开发中, 小图标-icon 此单词也是 i 开头, 所以征用了 i 标签专门做图标 -->
+  <i style="background-image: url('../assets/img/979.png')"></i>
+</body>
+
+</html>

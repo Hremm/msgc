@@ -1,0 +1,48 @@
+/* 样式重置 reset.css : 没有特异性, 所有的网站都这么设置 */
+* {
+  /* 边框盒子: 宽和高的设定, 不会受到内边距和边框的影响 */
+  box-sizing: border-box;
+}
+
+html {
+  /* 默认会被子元素继承的样式 */
+  /* 统一不同浏览器的默认字体大小 */
+  font-size: 16px;
+  /* 文字颜色 默认纯黑, 体验不佳 */
+  color: #333;
+}
+
+img, video {
+  /* 解决幽灵空白节点 */
+  display: block;
+  /* 修改默认的适配方案 */
+  object-fit: cover;
+}
+
+body, ul, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* 重置输入框 */
+input, button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+i {
+  display: inline-block;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video dom操作 10:16</title>
+  <style>
+    video {
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+      border: 3px solid green;
+    }
+  </style>
+</head>
+
+<body>
+  <video src="../assets/video/33.mp4" width="200"></video>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('video').click(function () {
+      console.dir(this)
+      // play: 播放
+      // pause: 暂停
+      // paused : 当前的暂停状态
+
+      console.log('paused:', this.paused);
+      this.paused ? this.play() : this.pause()
+      // 播放时动画方式, 变宽, 否则变窄
+      if (this.paused) {
+        $(this).stop().animate({ width: '-=50' })
+      } else {
+        $(this).stop().animate({ width: '+=50' })
+      }
+    })
+  </script>
+</body>
+
+</html>

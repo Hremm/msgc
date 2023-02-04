@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video 动画 10:37</title>
+
+  <style>
+    #box {
+      width: 200px;
+      height: 400px;
+      border: 2px solid blue;
+      overflow: hidden;
+    }
+
+    #box>video {
+      height: 100%;
+      width: 300px;
+      object-fit: cover;
+      /* 滤镜 */
+      /* 高斯模糊滤镜, 值为像素, 越大越模糊 */
+      filter: blur(2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <video src="../assets/video/11.mp4"></video>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('video').click(function () {
+      if (this.paused) {
+        this.play()
+        // 让盒子变宽, 其父元素 parent
+        $(this).parent().stop().animate({ width: 300 })
+        $(this).css('filter', 'blur(0)') //去掉滤镜
+      } else {
+        this.pause()
+        $(this).parent().stop().animate({ width: 200 })
+        $(this).css('filter', 'blur(2px)') //去掉滤镜
+      }
+    })
+  </script>
+</body>
+
+</html>

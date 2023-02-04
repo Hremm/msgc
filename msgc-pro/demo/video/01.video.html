@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video 视频 09:04</title>
+
+  <style>
+    /* 视频,图片: 这类资源都具有原始比例 */
+    video {
+      /* 修改为块元素, 解决幽灵空白节点问题 */
+      display: block;
+
+      /* 如果只是单独修改 宽或高, 则另一个属性会自动适配比例进行调整 */
+      width: 400px;
+      /* 当固定宽和高, 但比例与原始比例不一致, 需要选择适配方案 */
+      height: 400px;
+      /* 适配属性 */
+      /* cover: 被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。 */
+      object-fit: cover;
+      border: 3px solid red;
+    }
+
+    #box {
+      border: 2px solid green;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 多媒体组件三人组: img图片  video视频  audio音频 -->
+
+  <!-- src: 指定加载的视频资源地址 -->
+  <!-- controls: 控制器, 允许用户操作视频 -->
+  <!-- 更多的属性, 查看官方 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video -->
+
+  <!-- loop: 循环播 -->
+  <!-- autoplay: 自动播放; 不推荐采用, 特别是有声音的资源. 而且在一些浏览器中, 如果视频未静音-muted, 自动播放不会生效  -->
+
+  <!-- 视频封面: -->
+  <!-- preload: 预加载;  可选值有3个 
+    none不预加载 - 等用户播放时临时下载, 适合网页上有大量视频需要用户选择性下载时
+    
+    auto 预加载 - 提前下载视频资源, 用户播放时更流畅;  仅适合必须播放的视频, 例如背景视频.  当具有 autoplay 这个自动播放的属性时, 默认就是预加载
+
+    metadata - 下载元数据, 视频相关信息, 例如长度, 但不含视频本身 -->
+
+  <!-- poster: 海报,封面
+      默认情况: 视频加载时, 会把其第一帧画面作为封面
+      如果关闭预加载, 则需要手动设置封面图
+    -->
+  <div id="box">
+    <video poster="../assets/img/index/11.jpg" preload="none" src="../assets/video/11.mp4" muted controls loop></video>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper入门 14:06</title>
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+      border: 2px solid blue;
+    }
+
+    .swiper-slide>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://web.codeboy.com/xuezi/img/index/banner3.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // 初始化
+    var mySwiper = new Swiper('.swiper', {
+      loop: true, // 开启无限循环
+      effect: 'coverflow',
+      slidesPerView: 3,
+      centeredSlides: true,
+      // autoplay: true, //自动切换
+      autoplay: {
+        // 用户操作后则失效??
+        disableOnInteraction: false, //false代表关闭此功能
+        pauseOnMouseEnter: true, //鼠标进入时暂停
+      }
+    })
+  </script>
+</body>
+
+</html>

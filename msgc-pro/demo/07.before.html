@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素选择器 09:06</title>
+
+  <style>
+    /* 伪元素: 假的元素, HTML中不可见的元素 */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* after: 后面的 */
+    p::after {
+      /* 内容 */
+      content: '热';
+      color: white;
+      background-color: #ff6600;
+      margin-left: 5px;
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+      line-height: 20px;
+      border-radius: 5px;
+    }
+
+    p::before {
+      /* 精灵图, 通过背景图的剪切实现 */
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-image: url('../assets/img/453.png');
+      background-size: 30px;
+      /* border: 1px solid green; */
+      background-position: 0 -60px;
+      transform: translateY(5px);
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p>一新冠患者因过量饮水导致水中毒</p>
+</body>
+
+</html>

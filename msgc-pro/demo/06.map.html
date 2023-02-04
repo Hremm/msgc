@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>map 17:11</title>
+</head>
+
+<body>
+  <div id="box">
+    <!-- <h2>泡泡</h2>
+    <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>scss</li>
+      <li>js</li>
+    </ul> -->
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    var data = [
+      {
+        title: '泡泡',
+        items: ['html', 'css', 'scss', 'js']
+      },
+      {
+        title: '亮亮',
+        items: ['node.js', 'express', 'sql', 'git']
+      },
+      {
+        title: '小新',
+        items: ['jscore', 'dom', 'jquery', 'html5core']
+      },
+    ]
+
+    $('#box').html(
+      data.map(value => {
+        const { title, items } = value
+        // 遍历数组, 转为HTML代码组成的数组
+        // join() : 数组拼接为字符串, '' 可以去掉间隔的逗号
+        const x = items.map(value => { return `<li>${value}</li>` }).join('')
+
+        return `<h2>${title}</h2>
+        <ul>
+          ${x}
+        </ul>`
+      })
+    )
+  </script>
+</body>
+
+</html>

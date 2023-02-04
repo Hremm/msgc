@@ -1,0 +1,65 @@
+#footer {
+  display: none !important;
+}
+
+body {
+  background-color: #fae8c8;
+}
+body > #body > div {
+  width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+body > #body > div > h2 {
+  margin-bottom: 20px;
+}
+body > #body > div > div:not(.agree) {
+  height: 75px;
+}
+body > #body > div > div:not(.agree) > input {
+  border: 2px solid #888;
+  padding: 8px;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 20px;
+}
+body > #body > div > div:not(.agree) > input.err {
+  border-color: red;
+}
+body > #body > div > div:not(.agree) > input:focus {
+  border-color: blue;
+}
+body > #body > div > div:not(.agree) > p {
+  display: none;
+}
+body > #body > div > div:not(.agree) > p.ok {
+  color: green;
+}
+body > #body > div > div:not(.agree) > p.err {
+  color: red;
+}
+body > #body > div > div.agree {
+  margin-top: 40px;
+  display: flex;
+}
+body > #body > div > div.agree > a {
+  margin-left: 4px;
+  color: red;
+  font-size: 14px;
+}
+body > #body > div > button {
+  background-color: #f75148;
+  border-radius: 5px;
+  width: 200px;
+  height: 36px;
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+}/*# sourceMappingURL=register.css.map */
